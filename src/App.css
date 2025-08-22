@@ -1,3 +1,15 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+ 
+  background-image: "./assets/fondo-marmoleado.png" ;
+  color: #1c1c1c;
+}
+
+
+
+
 .App {
   text-align: center;
 }
