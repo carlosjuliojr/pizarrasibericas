@@ -1,8 +1,6 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom"; 
-import heroImage from "../assets/textura-pared-piedra-marron_1310085-64638.jpg";
-import logo from "../assets/logo2.png";
 
 
 export default function HeroBanner() {

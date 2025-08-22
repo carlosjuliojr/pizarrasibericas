@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Typography } from "@mui/material";
 import HeroBanner from "../components/HeroBanner";
 
 export default function Home() {
