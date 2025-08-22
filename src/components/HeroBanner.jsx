@@ -8,19 +8,18 @@ export default function HeroBanner() {
     <Box
       sx={{
         height: "100vh",
-        width: "100vw",
+        width: "100%",
         //backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+       // backgroundAttachment: "fixed",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         color: "white",
         textAlign: "center",
-        p: 2,
       }}
     >
 
@@ -38,8 +37,7 @@ export default function HeroBanner() {
         sx={{
           backgroundColor: "rgba(0, 0, 0, 0.6)",
           borderRadius: 4,
-          p: 3,
-          maxWidth: 600,
+          maxWidth: 400,
           boxShadow: "0 4px 15px rgba(0,0,0,0.5)",
         }}
       >

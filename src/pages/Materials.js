@@ -9,9 +9,9 @@ import porfidoImg from "../assets/piedra-porfido.jpg";
 export default function Materials() {
   // 2. Use the imported variables in your data array
   const materials = [
-    { title: "Piedra pizarra", img: tejasImg, desc: "Piedra de alta calidad." },
-    { title: "Mármoles", img: marmolesImg, desc: "Mármoles duraderos y elegantes para pisos y revestimientos." },
-    { title: "Pórfido", img: porfidoImg, desc: "Pórfido para proyectos de pavimentación y exteriores." }
+    { title: "Piedra pizarra", img: tejasImg, desc: "De alta calidad." },
+    { title: "Mármoles", img: marmolesImg, desc: "Más duraderos y elegantes para pisos y revestimientos." },
+    { title: "Pórfido", img: porfidoImg, desc: "Ideal para proyectos de pavimentación y exteriores." }
   ];
 
   return (
