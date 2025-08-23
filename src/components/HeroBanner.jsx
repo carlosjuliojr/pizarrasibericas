@@ -225,7 +225,7 @@ export default function HeroBanner() {
           },
         }}
         component={Link}
-        to="/materials"
+        to="/products"
       >
         Conoce nuestros productos
       </Button>

@@ -20,7 +20,7 @@ const pages = [
   { name: "Inicio", path: "/" },
   { name: "Sobre Nosotros", path: "/about" },
   { name: "Servicios", path: "/services" },
-  { name: "Productos", path: "/materials" },
+  { name: "Productos", path: "/products" },
   { name: "Contactos", path: "/contacts" },
 ];
 

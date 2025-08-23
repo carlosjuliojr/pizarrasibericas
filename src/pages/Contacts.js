@@ -23,12 +23,38 @@ export default function Contacts() {
       }}
     >
       <Container maxWidth="md">
-        <Typography variant="h2"
-          component="h1" gutterBottom align="left"
-          color="rgba(37, 37, 37, 0.6)"
-        >
-          Contáctanos
-        </Typography>
+             <Typography
+               variant="h2"
+               component="h1"
+               gutterBottom
+               align="center"
+               color="white"
+               sx={{
+                 fontWeight: "bold",
+                 textShadow: "2px 2px 6px rgba(0,0,0,0.7)",
+                 fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+                 position: "relative",
+                 mt: -6, // mueve el título hacia arriba
+                 "&::after": {
+                   content: '""',
+                   position: "absolute",
+                   left: "50%",
+                   bottom: -8,
+                   transform: "translateX(-50%)",
+                   width: "60%",
+                   height: "4px",
+                   borderRadius: "2px",
+                   background: "linear-gradient(90deg, #8F817E, #C0B8B5)",
+                   animation: "underlineGrow 1.5s ease forwards",
+                 },
+                 "@keyframes underlineGrow": {
+                   from: { width: "0%" },
+                   to: { width: "60%" },
+                 },
+               }}
+             >
+                Contáctanos
+             </Typography>
         <Typography
           variant="h6"
           component="p"
@@ -107,7 +133,10 @@ export default function Contacts() {
               </Typography>
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={4}
+          
+          
+          >
             <Paper elevation={3} sx={{ p: 4, textAlign: "center" }}>
               <Facebook color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>

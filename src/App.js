@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import Services from "./pages/Services";
-import Materials from "./pages/Materials";
+import Products from "./pages/Products";
 import backgroundImage from "./assets/fondo-marmoleado.png"; // Importa el fondo
 import "./App.css";
 
@@ -37,7 +37,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/materials" element={<Materials />} />
+            <Route path="/products" element={<Products />} />
           </Routes>
         </Box>
         <Footer />
