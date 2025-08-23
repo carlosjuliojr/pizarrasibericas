@@ -81,7 +81,7 @@ export default function Footer() {
               Navegación
             </Typography>
             <Box>
-              <Link href="/materials" color="inherit" underline="hover" sx={{ display: 'block' }}>
+              <Link href="/products" color="inherit" underline="hover" sx={{ display: 'block' }}>
                 Productos
               </Link>
               <Link href="/services" color="inherit" underline="hover" sx={{ display: 'block' }}>
