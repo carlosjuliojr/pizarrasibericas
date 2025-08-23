@@ -5,13 +5,19 @@ import { Container, Grid, Card, CardContent, CardMedia, Typography } from "@mui/
 import tejasImg from "../assets/piedra-pizarra.png";
 import marmolesImg from "../assets/piedra-marmol.jpg";
 import porfidoImg from "../assets/piedra-porfido.jpg";
+import marmolGrisImg from "../assets/marmol-gris-de-carrara.jpg";
+import cuarzoImg from "../assets/cuarzo-de-lino-blanco.jpg";
+import travertinoImg from "../assets/travertino-plateado-oscuro.jpg";
 
 export default function Products() {
   // 2. Use the imported variables in your data array
   const materials = [
     { title: "Piedra pizarra", img: tejasImg, desc: "De alta calidad." },
     { title: "Mármoles", img: marmolesImg, desc: "Más duraderos y elegantes para pisos y revestimientos." },
-    { title: "Pórfido", img: porfidoImg, desc: "Ideal para proyectos de pavimentación y exteriores." }
+    { title: "Pórfido", img: porfidoImg, desc: "Ideal para proyectos de pavimentación y exteriores." },
+    { title: "Marmol gris de carrara", img: marmolGrisImg, desc: "Brumoso con un fondo blanco y un patrón gris extraído de Italia." },
+    { title: "cuarzo de lino blanco", img: cuarzoImg, desc: "Piedra extremadamente duradera, resistente a la corrosión." },
+    { title: "Travertino", img: travertinoImg, desc: "Es una piedra travertino plateada de Iràn." }
   ];
 
   return (
