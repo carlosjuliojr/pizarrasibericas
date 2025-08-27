@@ -89,7 +89,7 @@ export default function HeroBanner() {
                 lineHeight: 1.8,
               }}
             >
-              Venta de tejas de piedra, mármoles, pórfido y revestimientos de
+              Venta de tejas de piedra pizarra, mármoles, pórfido y revestimientos de
               piedra en general, con servicios profesionales de instalación.
             </Typography>
           </Box>

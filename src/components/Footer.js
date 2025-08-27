@@ -23,6 +23,7 @@ export default function Footer() {
         mt: 'auto',
         backgroundColor: "#2e2e2e",
         color: "white",
+        marginTop: { xs: 3, md: 0 }, 
       }}
     >
       <Container maxWidth="lg">
