@@ -76,7 +76,13 @@ export default function About() {
                   <ListItemIcon>
                     <CheckCircleOutline sx={{ color: "#4caf50" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Tejas de piedra" />
+                  <ListItemText  
+                    primary={
+                      <Typography sx={{ color: "white" }}>
+                        <b>Piedra Pizarra</b>
+                      </Typography>
+                    }
+                  />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>

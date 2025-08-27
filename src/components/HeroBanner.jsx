@@ -89,7 +89,7 @@ export default function HeroBanner() {
                 lineHeight: 1.8,
               }}
             >
-              Venta de tejas de piedra pizarra, mármoles, pórfido y revestimientos de
+              Venta de <b>Piedra Pizarra</b>, mármoles, pórfido y revestimientos de
               piedra en general, con servicios profesionales de instalación.
             </Typography>
           </Box>
@@ -121,7 +121,7 @@ export default function HeroBanner() {
                 lineHeight: 1.8,
               }}
             >
-              Diseños exclusivos en mármol y pizarra que aportan elegancia a
+              Diseños exclusivos en mármol y <b>pizarra</b> que aportan elegancia a
               interiores y exteriores.
             </Typography>
           </Box>
