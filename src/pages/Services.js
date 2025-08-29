@@ -78,7 +78,6 @@ export default function Services() {
                   }}
                 />
               </CardMedia>
-
               <CardContent>
                 <Typography variant="h6">{m.title}</Typography>
                 <Typography variant="body2">{m.desc}</Typography>
