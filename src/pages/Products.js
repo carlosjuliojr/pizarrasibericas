@@ -15,7 +15,7 @@ export default function Products() {
     { title: "Piedra pizarra", img: tejasImg, desc: "De alta calidad." },
     { title: "Mármol travestino natural", img: marmolesImg, desc: "Más duraderos y elegantes para pisos y revestimientos." },
     { title: "Pórfido", img: porfidoImg, desc: "Ideal para proyectos de pavimentación y exteriores." },
-    { title: "Marmol gris de carrara", img: marmolGrisImg, desc: "Brumoso con un fondo blanco y un patrón gris extraído de Italia." },
+    { title: "Mármol gris de carrara", img: marmolGrisImg, desc: "Brumoso con un fondo blanco y un patrón gris extraído de Italia." },
     { title: "Cuarzo de lino blanco", img: cuarzoImg, desc: "Piedra extremadamente duradera, resistente a la corrosión." },
     { title: "Piedra natural", img: travertinoImg, desc: "Es una opción versátil y elegante para darle un toque especial a tus espacios." }
   ];
