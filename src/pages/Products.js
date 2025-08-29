@@ -2,26 +2,26 @@ import React from "react";
 import { Container, Grid, Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 // 1. Import local images from the assets folder
-import tejasImg from "../assets/piedra-pizarra.png";
-import marmolesImg from "../assets/piedra-marmol.jpg";
-import porfidoImg from "../assets/piedra-porfido.jpg";
-import marmolGrisImg from "../assets/marmol-gris-de-carrara.jpg";
-import cuarzoImg from "../assets/cuarzo-de-lino-blanco.jpg";
-import travertinoImg from "../assets/travertino-plateado-oscuro.jpg";
+import tejasImg from "../assets/products/piedra-pizarra.png";
+import marmolesImg from "../assets/products/marmol-travestino-natural.jpg";
+import porfidoImg from "../assets/products/piedra-porfido.jpg";
+import marmolGrisImg from "../assets/products/marmol-gris-de-carrara.jpg";
+import cuarzoImg from "../assets/products/cuarzo-de-lino-blanco.jpg";
+import travertinoImg from "../assets/products/piedra-natural.png";
 
 export default function Products() {
   // 2. Use the imported variables in your data array
   const materials = [
     { title: "Piedra pizarra", img: tejasImg, desc: "De alta calidad." },
-    { title: "Mármoles", img: marmolesImg, desc: "Más duraderos y elegantes para pisos y revestimientos." },
+    { title: "Mármol travestino natural", img: marmolesImg, desc: "Más duraderos y elegantes para pisos y revestimientos." },
     { title: "Pórfido", img: porfidoImg, desc: "Ideal para proyectos de pavimentación y exteriores." },
     { title: "Marmol gris de carrara", img: marmolGrisImg, desc: "Brumoso con un fondo blanco y un patrón gris extraído de Italia." },
-    { title: "cuarzo de lino blanco", img: cuarzoImg, desc: "Piedra extremadamente duradera, resistente a la corrosión." },
-    { title: "Travertino", img: travertinoImg, desc: "Es una piedra travertino plateada de Iràn." }
+    { title: "Cuarzo de lino blanco", img: cuarzoImg, desc: "Piedra extremadamente duradera, resistente a la corrosión." },
+    { title: "Piedra natural", img: travertinoImg, desc: "Es una opción versátil y elegante para darle un toque especial a tus espacios." }
   ];
 
   return (
-    <Container sx={{ mt: 6 }}>
+    <Container sx={{ mb: 3, mt:6 }}>
       <Typography
         variant="h2"
         component="h1"
@@ -54,9 +54,9 @@ export default function Products() {
       >
         Nuestros Productos
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} justifyContent="center">
         {materials.map((m, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
+          <Grid item xs={12} sm={6} md={4} key={i} sx={{ display: "flex", justifyContent: "center" }}>
             <Card sx={{ height: "100%", width: 350 }}>
               <CardMedia
                 component="div"

@@ -43,16 +43,18 @@ export default function About() {
       >
         Sobre Nosotros
       </Typography>
-        <Typography
-          variant="h6"
-          component="p"
-          align="center"
-          color="text.secondary"
-          sx={{ mb: 6 }}
-        >
-          Expertos en materiales y revestimientos de piedra natural con un servicio de instalación profesional.
-        </Typography>
-
+      <Typography
+        variant="h6"
+        component="p"
+        align="center"
+        color="text.secondary"
+        sx={{ mb: 6 }}
+      >
+        Somos especialistas en la <b>venta</b> e <b>instalación profesional</b> de 
+        <b> tejas de piedra pizarra</b>. Ofrecemos también servicios de 
+        <b> mantención y restauración</b>, asegurando que cada proyecto mantenga 
+        su belleza, durabilidad y resistencia a lo largo del tiempo.
+      </Typography>
         <Grid container spacing={4} alignItems="center">
           {/* Sección de Venta */}
           <Grid item xs={12} md={6}>
@@ -78,8 +80,8 @@ export default function About() {
                   </ListItemIcon>
                   <ListItemText  
                     primary={
-                      <Typography sx={{ color: "white" }}>
-                        <b>Piedra Pizarra</b>
+                      <Typography sx={{ color: "white", fontWeight: "bold" }}>
+                        Venta de <b>Tejas de Piedra Pizarra</b>
                       </Typography>
                     }
                   />
@@ -88,23 +90,24 @@ export default function About() {
                   <ListItemIcon>
                     <CheckCircleOutline sx={{ color: "#4caf50" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Mármoles de diversos acabados" />
+                  <ListItemText primary="Mármoles y revestimientos complementarios" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <CheckCircleOutline sx={{ color: "#4caf50" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Pórfido" />
+                  <ListItemText primary="Pórfido y piedras naturales variadas" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <CheckCircleOutline sx={{ color: "#4caf50" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Revestimientos de piedra en general" />
+                  <ListItemText primary="Accesorios y acabados para cubiertas de piedra" />
                 </ListItem>
               </List>
               <Typography variant="body2" color="gray.400">
-                Seleccionamos cada material para garantizar durabilidad, belleza y un acabado excepcional en cualquier proyecto.
+                Nuestra especialidad son las <b>Tejas de Piedra Pizarra</b>, seleccionadas cuidadosamente 
+                para garantizar resistencia, durabilidad y belleza natural en cada proyecto.
               </Typography>
             </Box>
           </Grid>
@@ -131,23 +134,37 @@ export default function About() {
                   <ListItemIcon>
                     <Construction sx={{ color: "#ff9800" }} />
                   </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <Typography sx={{ color: "white", fontWeight: "bold" }}>
+                        Mantención y reparación de <b>Tejas de Piedra Pizarra</b>
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <Construction sx={{ color: "#ff9800" }} />
+                  </ListItemIcon>
                   <ListItemText primary="Instalaciones precisas y seguras" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <Construction sx={{ color: "#ff9800" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Acabados de alta calidad" />
+                  <ListItemText primary="Acabados de alta calidad en cubiertas y fachadas" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <Construction sx={{ color: "#ff9800" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Asesoramiento técnico y personalizado" />
+                  <ListItemText primary="Asesoramiento técnico especializado en piedra natural" />
                 </ListItem>
               </List>
               <Typography variant="body2" color="gray.400">
-                Confiamos en nuestro trabajo para dar vida a sus proyectos, garantizando resultados que superan las expectativas.
+                Nuestro enfoque está en la <b>Venta e Instalación de Tejas de Piedra Pizarra</b>, 
+                pero también ofrecemos mantención especializada para que cada cubierta conserve su 
+                elegancia y resistencia a lo largo del tiempo.
               </Typography>
             </Box>
           </Grid>

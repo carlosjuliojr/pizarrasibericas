@@ -26,8 +26,7 @@ function App() {
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed", // Efecto fijo
         backgroundPosition: "center",
-        
-        
+      
         
         }}>
         <ResponsiveNavbar />

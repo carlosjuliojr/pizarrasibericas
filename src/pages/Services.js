@@ -1,20 +1,26 @@
 import React from "react";
 import { Container, Grid, Card, CardContent, CardMedia, Typography } from "@mui/material";
 // 1. Import local images from the assets folder
-import piedraLajaImg from "../assets/pegando-piedra-laja.jpg";
-import marmolesImg from "../assets/pegando-marmol.jpg";
-import porfidoImg from "../assets/pegando-porfido.jpg";
+import banoMarmolImg from "../assets/services/marmol-pulido-baño.jpg";
+import casaTecholImg from "../assets/services/reparacion-techo-casa.jpg";
+import techoImg from "../assets/services/servicio-techo.jpg";
+import piedraLajaImg from "../assets/services/pegando-piedra-laja.jpg";
+import marmolesImg from "../assets/services/pegando-marmol.jpg";
+import porfidoImg from "../assets/services/pegando-porfido.jpg";
 
 
 export default function Services() {
   const services = [
-    { title: "Servicio de Piedra laja", img: piedraLajaImg, desc: "Somos expertos en instalacion de este material." },
+    { title: "Mantencion de techos", img: techoImg, desc: "Mantencio y reparacion en techos." },
+    { title: "Instalacion de marmol pulido", img: banoMarmolImg, desc: "Diseño e instalacion completa en baños." },
+    { title: "Remodelacion de techo", img: casaTecholImg, desc: "Somos cuidadosos en el diseño y perfeción" },
+    { title: "Servicio de Piedra laja", img: piedraLajaImg, desc: "Expertos en instalacion de este material." },
     { title: "Los mejores trabajos en marmol", img: marmolesImg, desc: "Tenemos un alto cuidado y profesionalismo al instalar." },
     { title: "Servicio de porfido", img: porfidoImg, desc: "Sabemos que tu seguridad esta primero." }
   ];
 
   return (
-    <Container sx={{ mt: 6 }}>
+    <Container sx={{ mb: 3, mt:6 }} >
       <Typography
         variant="h2"
         component="h1"
@@ -47,9 +53,9 @@ export default function Services() {
       >
         Servicios Profesionales
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} justifyContent="center">
         {services.map((m, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
+         <Grid item xs={12} sm={6} md={4} key={i} sx={{ display: "flex", justifyContent: "center" }}>
             <Card sx={{ height: "100%", width: 350 }}>
               <CardMedia
                 component="div"

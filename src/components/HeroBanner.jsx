@@ -30,7 +30,7 @@ export default function HeroBanner() {
         sx={{
           fontWeight: "bold",
           textShadow: "2px 2px 6px rgba(0,0,0,0.7)",
-          fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+          fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
           position: "relative",
           mt: -12, // mueve el título hacia arriba
           "&::after": {
@@ -89,9 +89,44 @@ export default function HeroBanner() {
                 lineHeight: 1.8,
               }}
             >
-              Venta de <b>Piedra Pizarra</b>, mármoles, pórfido y revestimientos de
-              piedra en general, con servicios profesionales de instalación.
+              Especialistas en <b>venta y mantención de tejas de piedra pizarra</b>, mármoles,
+              pórfido y revestimientos de piedra natural con servicios profesionales
+              de instalación.
             </Typography>
+          </Box>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Box
+            sx={{
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              borderRadius: 4,
+              p: { xs: 4, sm: 6 },
+              boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.7)",
+              backdropFilter: "blur(4px)",
+              mx: 2,
+              my: 5,
+              minHeight: { xs: 180, sm: 220, md: 260 },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              maxWidth: 600,
+            }}
+          >
+           <Typography
+              variant="h5"
+              component="p"
+              sx={{
+                textShadow: "1px 1px 4px rgba(0,0,0,0.7)",
+                fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+                lineHeight: 1.8,
+              }}
+            >
+              Diseños exclusivos en mármol y <b>pizarra</b>, ideales para
+              cubiertas, pisos y <b>tejas de piedra pizarra</b> que aportan
+              elegancia a interiores y exteriores.
+            </Typography>
+
           </Box>
         </SwiperSlide>
 
@@ -121,46 +156,11 @@ export default function HeroBanner() {
                 lineHeight: 1.8,
               }}
             >
-              Diseños exclusivos en mármol y <b>pizarra</b> que aportan elegancia a
-              interiores y exteriores.
+              Pizarras Ibéricas: expertos en <b>tejas de pizarra</b> y materiales
+              de <b>piedra natural</b>. Garantizamos <b>venta, mantención e instalación</b>
+              con la más alta calidad y experiencia en cada detalle.
             </Typography>
-          </Box>
-        </SwiperSlide>
 
-        <SwiperSlide>
-          <Box
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.6)",
-              borderRadius: 4,
-              p: { xs: 4, sm: 6 },
-              boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.7)",
-              backdropFilter: "blur(4px)",
-              mx: 2,
-              my: 5,
-              minHeight: { xs: 180, sm: 220, md: 260 },
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              maxWidth: 600,
-            }}
-          >
-            <Typography
-              variant="h5"
-              component="p"
-              sx={{
-                textShadow: "1px 1px 4px rgba(0,0,0,0.7)",
-                fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
-                lineHeight: 1.8,
-                minHeight: { xs: 180, sm: 220, md: 260 },
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                maxWidth: 600,
-              }}
-            >
-              Materiales resistentes al paso del tiempo, ideales para cualquier
-              clima y estilo arquitectónico.
-            </Typography>
           </Box>
         </SwiperSlide>
 
