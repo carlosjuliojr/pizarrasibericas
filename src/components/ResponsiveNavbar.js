@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo2.png";
+import logo from "../assets/logo3.jpg";
 import HomeIcon from '@mui/icons-material/Home';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import DesignServicesRoundedIcon from '@mui/icons-material/DesignServicesRounded';
@@ -62,8 +62,8 @@ export default function ResponsiveNavbar() {
           src={logo}
           alt="Logo"
           sx={{
-            width: 100,
-            height: 100,
+            width: 120,
+            height: 50,
             borderRadius: '16px',
             objectFit: 'cover',
             p: 1

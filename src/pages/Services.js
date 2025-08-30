@@ -11,10 +11,10 @@ import porfidoImg from "../assets/services/pegando-porfido.jpg";
 
 export default function Services() {
   const services = [
-    { title: "Mantención de techos", img: techoImg, desc: "Reparamos y proporcionamos mantención en techos." },
-    { title: "Instalación de marmol pulido", img: banoMarmolImg, desc: "Diseño e instalación completa en baños." },
-    { title: "Remodelación de techo", img: casaTecholImg, desc: "Somos cuidadosos en el diseño y perfeción" },
-    { title: "Servicio de Piedra laja", img: piedraLajaImg, desc: "Expertos en instalación de este material." },
+    { title: "Mantención de techos de piedra pizarra", img: techoImg, desc: "Reparamos y proporcionamos mantención en techos." },
+    { title: "Instalación de mármol pulido", img: banoMarmolImg, desc: "Diseño e instalación completa en baños." },
+    { title: "Remodelación en techo de teja de piedra pizarra", img: casaTecholImg, desc: "Somos cuidadosos en el diseño y perfeción" },
+    { title: "Servicio de Piedra marina", img: piedraLajaImg, desc: "Expertos en instalación de este material." },
     { title: "Los mejores trabajos en mármol", img: marmolesImg, desc: "Tenemos un alto cuidado y profesionalismo al instalar." },
     { title: "Servicio de pórfido", img: porfidoImg, desc: "Sabemos que tu seguridad esta primero." }
   ];

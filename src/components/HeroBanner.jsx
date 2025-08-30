@@ -4,9 +4,18 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import "swiper/css/navigation"; // 👈 importa estilos de flechas
+import { Pagination, Navigation, Autoplay } from "swiper/modules"; // 👈 importa Navigation
 
 export default function HeroBanner() {
+
+  const customSwiperStyles = {
+    '--swiper-navigation-color': 'white',
+    width: "100%",
+    maxWidth: 600,
+  };
+
+
   return (
     <Box
       sx={{
@@ -32,7 +41,7 @@ export default function HeroBanner() {
           textShadow: "2px 2px 6px rgba(0,0,0,0.7)",
           fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
           position: "relative",
-          mt: -12, // mueve el título hacia arriba
+          mt: -12,
           "&::after": {
             content: '""',
             position: "absolute",
@@ -54,14 +63,18 @@ export default function HeroBanner() {
         Pizarras Ibéricas
       </Typography>
 
-
-      {/* Carrusel de párrafos */}
+      {/* Carrusel con flechas */}
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Navigation, Autoplay]} // 👈 activa Navigation
         pagination={{ clickable: true }}
+        navigation={true} // 👈 habilita flechas
         spaceBetween={30}
         slidesPerView={1}
-        style={{ width: "100%", maxWidth: 600 }}
+        autoplay={{
+          delay: 7000, // 👈 Se mueve cada 5 segundos
+          disableOnInteraction: false, // 👈 No se detiene al interactuar con el usuario
+        }}
+        style={customSwiperStyles}
       >
         <SwiperSlide>
           <Box
@@ -89,9 +102,9 @@ export default function HeroBanner() {
                 lineHeight: 1.8,
               }}
             >
-              Especialistas en <b>venta y mantención de tejas de piedra pizarra</b>, mármoles,
+              Especialistas en <b>venta y mantención de TEJAS DE PIEDRA PIZARRA</b>, mármoles,
               pórfido y revestimientos de piedra natural con servicios profesionales
-              de instalación.
+              de <b>INSTALACIÓN</b>.
             </Typography>
           </Box>
         </SwiperSlide>
@@ -102,44 +115,10 @@ export default function HeroBanner() {
               backgroundColor: "rgba(0, 0, 0, 0.6)",
               borderRadius: 4,
               p: { xs: 4, sm: 6 },
-              boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.7)",
-              backdropFilter: "blur(4px)",
               mx: 2,
               my: 5,
-              minHeight: { xs: 180, sm: 220, md: 260 },
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              maxWidth: 600,
-            }}
-          >
-           <Typography
-              variant="h5"
-              component="p"
-              sx={{
-                textShadow: "1px 1px 4px rgba(0,0,0,0.7)",
-                fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
-                lineHeight: 1.8,
-              }}
-            >
-              Diseños exclusivos en mármol y <b>pizarra</b>, ideales para
-              cubiertas, pisos y <b>tejas de piedra pizarra</b> que aportan
-              elegancia a interiores y exteriores.
-            </Typography>
-
-          </Box>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Box
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.6)",
-              borderRadius: 4,
-              p: { xs: 4, sm: 6 },
               boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.7)",
               backdropFilter: "blur(4px)",
-              mx: 2,
-              my: 5,
               minHeight: { xs: 180, sm: 220, md: 260 },
               display: "flex",
               justifyContent: "center",
@@ -156,11 +135,10 @@ export default function HeroBanner() {
                 lineHeight: 1.8,
               }}
             >
-              Pizarras Ibéricas: expertos en <b>tejas de pizarra</b> y materiales
-              de <b>piedra natural</b>. Garantizamos <b>venta, mantención e instalación</b>
-              con la más alta calidad y experiencia en cada detalle.
+              Diseños exclusivos en mármol y <b>pizarra</b>, ideales para
+              cubiertas, pisos y <b>TEJAS DE PIEDRA PIZARRA</b> que aportan
+              elegancia a interiores y exteriores.
             </Typography>
-
           </Box>
         </SwiperSlide>
 
@@ -170,10 +148,43 @@ export default function HeroBanner() {
               backgroundColor: "rgba(0, 0, 0, 0.6)",
               borderRadius: 4,
               p: { xs: 4, sm: 6 },
-              boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.7)",
-              backdropFilter: "blur(4px)",
               mx: 2,
               my: 5,
+              boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.7)",
+              backdropFilter: "blur(4px)",
+              minHeight: { xs: 180, sm: 220, md: 260 },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              maxWidth: 600,
+            }}
+          >
+            <Typography
+              variant="h5"
+              component="p"
+              sx={{
+                textShadow: "1px 1px 4px rgba(0,0,0,0.7)",
+                fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+                lineHeight: 1.8,
+              }}
+            >
+              Pizarras Ibéricas: expertos en <b>TEJAS DE PIEDRA PIZARRA</b> y materiales
+              de <b>piedra natural</b>. Garantizamos <b>venta, mantención e instalación</b>
+              &nbsp;con la más alta calidad y experiencia en cada detalle.
+            </Typography>
+          </Box>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Box
+            sx={{
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              borderRadius: 4,
+              p: { xs: 4, sm: 6 },
+              mx: 2,
+              my: 5,
+              boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.7)",
+              backdropFilter: "blur(4px)",
               minHeight: { xs: 180, sm: 220, md: 260 },
               display: "flex",
               justifyContent: "center",
@@ -229,9 +240,6 @@ export default function HeroBanner() {
       >
         Conoce nuestros productos
       </Button>
-
-
-
     </Box>
   );
 }

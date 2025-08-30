@@ -51,7 +51,7 @@ export default function About() {
         sx={{ mb: 6 }}
       >
         Somos especialistas en la <b>venta</b> e <b>instalación profesional</b> de 
-        <b> tejas de piedra pizarra</b>. Ofrecemos también servicios de 
+        <b> TEJAS DE PIEDRA PIZARRA</b>. Ofrecemos también servicios de 
         <b> mantención y restauración</b>, asegurando que cada proyecto mantenga 
         su belleza, durabilidad y resistencia a lo largo del tiempo.
       </Typography>
@@ -81,7 +81,7 @@ export default function About() {
                   <ListItemText  
                     primary={
                       <Typography sx={{ color: "white", fontWeight: "bold" }}>
-                        Venta de <b>Tejas de Piedra Pizarra</b>
+                        Venta de <b>TEJAS DE PIEDRA PIZARRA</b>
                       </Typography>
                     }
                   />
@@ -106,7 +106,7 @@ export default function About() {
                 </ListItem>
               </List>
               <Typography variant="body2" color="gray.400">
-                Nuestra especialidad son las <b>Tejas de Piedra Pizarra</b>, seleccionadas cuidadosamente 
+                Nuestra especialidad son las <b>TEJAS DE PIEDRA PIZARRA</b>, seleccionadas cuidadosamente 
                 para garantizar resistencia, durabilidad y belleza natural en cada proyecto.
               </Typography>
             </Box>
@@ -137,7 +137,7 @@ export default function About() {
                   <ListItemText
                     primary={
                       <Typography sx={{ color: "white", fontWeight: "bold" }}>
-                        Mantención y reparación de <b>Tejas de Piedra Pizarra</b>
+                        Mantención y reparación de <b>TEJAS DE PIEDRA PIZARRA</b>
                       </Typography>
                     }
                   />
@@ -162,7 +162,7 @@ export default function About() {
                 </ListItem>
               </List>
               <Typography variant="body2" color="gray.400">
-                Nuestro enfoque está en la <b>Venta e Instalación de Tejas de Piedra Pizarra</b>, 
+                Nuestro enfoque está en la <b>Venta e Instalación de TEJAS DE PIEDRA PIZARRA</b>, 
                 pero también ofrecemos mantención especializada para que cada cubierta conserve su 
                 elegancia y resistencia a lo largo del tiempo.
               </Typography>

@@ -91,7 +91,8 @@ export default function Contacts() {
                 Teléfono
               </Typography>
               <Typography variant="body1">
-                +56 (9) 9052-6263
+                +56 (9) 9052-6263 <br/>
+                +56 (9) 9338-6875
               </Typography>
             </Paper>
           </Grid>
@@ -103,13 +104,13 @@ export default function Contacts() {
               </Typography>
               <Typography variant="body1">
                 <Link
-                  href="http://www.pizarrasibericas.com"
+                  href="http://www.pizarrasibericas.cl"
                   target="_blank"
                   rel="noopener noreferrer"
                   color="inherit"
                   underline="hover"
                 >
-                  www.pizarrasibericas.com
+                  www.pizarrasibericas.cl
                 </Link>
               </Typography>
             </Paper>
@@ -129,28 +130,6 @@ export default function Contacts() {
                   underline="hover"
                 >
                   @pizarrasibericas
-                </Link>
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}
-          
-          
-          >
-            <Paper elevation={3} sx={{ p: 4, textAlign: "center" }}>
-              <Facebook color="primary" sx={{ fontSize: 40, mb: 1 }} />
-              <Typography variant="h6" gutterBottom>
-                Facebook
-              </Typography>
-              <Typography variant="body1">
-                <Link
-                  href="https://www.facebook.com/pizarrasibericas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="inherit"
-                  underline="hover"
-                >
-                  pizarrasibericas
                 </Link>
               </Typography>
             </Paper>

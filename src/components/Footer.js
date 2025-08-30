@@ -38,15 +38,6 @@ export default function Footer() {
             </Typography>
             <Box sx={{ mt: 2 }}>
               <IconButton
-                href="https://www.facebook.com/pizarrasibericas"
-                target="_blank"
-                rel="noopener"
-                color="inherit"
-                aria-label="Facebook"
-              >
-                <Facebook />
-              </IconButton>
-              <IconButton
                 href="https://www.instagram.com/pizarrasibericas"
                 target="_blank"
                 rel="noopener"
@@ -71,7 +62,9 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2">
               <Phone sx={{ verticalAlign: 'middle', mr: 1 }} />
-              +56 (9) 9052-6263
+              +56 (9) 9052-6263<br/>
+              <Phone sx={{ verticalAlign: 'middle', mr: 1 }} />
+              +56 (9) 9338-6875
             </Typography>
           </Grid>
 
