@@ -9,7 +9,6 @@ import {
   Divider, // Importamos el componente Divider
 } from "@mui/material";
 import {
-  Facebook,
   Instagram,
   Email,
   Phone,

@@ -11,7 +11,6 @@ import {
   Email,
   Phone,
   Instagram,
-  Facebook,
   Language,
 } from "@mui/icons-material";
 
