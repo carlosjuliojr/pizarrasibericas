@@ -21,10 +21,10 @@ export default function Products() {
   const products = [
     { title: "Teja de Piedra pizarra", img: tejasImg, desc: "De alta calidad. En formatos 18x27 - 20x30 - 22x32" },
     { title: "Piedra pizarra gris verde", img: piedraPizarraGrisVerdeImg, desc: "Una roca metamórfica natural de tono oscuro con vetas verdosas, ideal para techos y revestimientos." },
-    { title: "Piedra pizarra con gancho", img: piedraPizarraConGanchoImg, desc: "Es una forma de instalación moderna y eficiente para techos, donde las tejas de pizarra se aseguran a la estructura del tejado mediante ganchos metálicos." },
+    { title: "Teja de piedra pizarra con ganchos", img: piedraPizarraConGanchoImg, desc: "Es una forma de instalación moderna y eficiente para techos, donde las tejas de pizarra se aseguran a la estructura del tejado mediante ganchos metálicos." },
     { title: "Gancho para teja de piedra pizarra", img: ganchoImg, desc: "Se utilizan para sujetar las tejas de forma segura a la estructura del tejado." },
     { title: "Mármol travestino natural", img: marmolesImg, desc: "Más duraderos y elegantes para pisos y revestimientos." },
-    { title: "Mármol gris de carrara", img: marmolGrisImg, desc: "Brumoso con un fondo blanco y un patrón gris extraído de Italia." },
+    { title: "Mármol carrara", img: marmolGrisImg, desc: "Brumoso con un fondo blanco y un patrón gris extraído de Italia." },
     { title: "Mármol pulido", img: marmolesPulidoImg, desc: "Excelente material dando un brillo de alta calidad." },
     { title: "Adoquin negro", img: adoquinNegroImg, desc: "Es una piedra natural de granito que se utiliza comúnmente en pavimentaciones, fachadas y bordes de jardines." },
     { title: "Adoquin gris", img: adoquinGrisImg, desc: " Es valorado por su durabilidad, resistencia a la compresión y versatilidad estética." },

@@ -55,8 +55,8 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2" sx={{ mb: 1 }}>
               <Email sx={{ verticalAlign: 'middle', mr: 1 }} />
-              <Link href="mailto:pizarrasibericas@gmail.com" color="inherit" underline="hover">
-                pizarrasibericas@gmail.com
+              <Link href="mailto:pizarraiberica@gmail.com" color="inherit" underline="hover">
+                pizarraiberica@gmail.com
               </Link>
             </Typography>
             <Typography variant="body2">

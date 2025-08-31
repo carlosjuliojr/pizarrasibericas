@@ -74,11 +74,11 @@ export default function Contacts() {
               </Typography>
               <Typography variant="body1">
                 <Link
-                  href="mailto:pizarrasibericas@gmail.com"
+                  href="mailto:pizarraiberica@gmail.com"
                   color="inherit"
                   underline="hover"
                 >
-                  pizarrasibericas@gmail.com
+                  pizarraiberica@gmail.com
                 </Link>
               </Typography>
             </Paper>
