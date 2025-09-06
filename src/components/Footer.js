@@ -28,7 +28,7 @@ export default function Footer() {
       <Container maxWidth="lg">
         <Grid container spacing={4} justifyContent="center" textAlign="center">
           {/* Columna 1: Título y redes sociales */}
-          <Grid item xs={12} md={4}>
+          <Grid sx={{  xs:12, md:4  }}>
             <Typography variant="h6" gutterBottom>
               Pizarras Ibéricas
             </Typography>
@@ -49,7 +49,7 @@ export default function Footer() {
           </Grid>
 
           {/* Columna 2: Contacto */}
-          <Grid item xs={12} md={4}>
+          <Grid sx={{  xs:12, md:4  }}>
             <Typography variant="h6" gutterBottom>
               Contactos
             </Typography>
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Columna 3: Espacio extra o enlaces */}
           {/* Si no la usas, puedes quitarla */}
-          <Grid item xs={12} md={4}>
+          <Grid sx={{  xs:12, md:4  }}>
             <Typography variant="h6" gutterBottom>
               Navegación
             </Typography>

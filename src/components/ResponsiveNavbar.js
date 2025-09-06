@@ -57,6 +57,7 @@ export default function ResponsiveNavbar() {
         {/* Logo o título */}
 
     
+      <Link to="/" style={{ textDecoration: "none" }}>
         <Box
           component="img"
           src={logo}
@@ -64,11 +65,13 @@ export default function ResponsiveNavbar() {
           sx={{
             width: 120,
             height: 50,
-            borderRadius: '16px',
-            objectFit: 'cover',
-            p: 1
+            borderRadius: "16px",
+            objectFit: "cover",
+            p: 1,
+            cursor: "pointer",
           }}
         />
+      </Link>
 
         <Typography
           variant="h6"
@@ -76,7 +79,7 @@ export default function ResponsiveNavbar() {
           component="div"
           sx={{ flexGrow: 1, display: { xs: "flex", md: "flex" } }}
         >
-        
+       
         </Typography>
 
         {/* Menú en pantallas grandes */}

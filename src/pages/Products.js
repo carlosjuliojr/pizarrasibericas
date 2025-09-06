@@ -71,7 +71,7 @@ export default function Products() {
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         {products.map((m, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i} sx={{ display: "flex", justifyContent: "center" }}>
+          <Grid key={i} sx={{ xs:12, sm:6, display: "flex", justifyContent: "center" }}>
             <Card sx={{ height: "100%", width: 350 }}>
               <CardMedia
                 component="div"

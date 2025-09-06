@@ -57,7 +57,7 @@ export default function About() {
       </Typography>
         <Grid container spacing={4} alignItems="center">
           {/* Sección de Venta */}
-          <Grid item xs={12} md={6}>
+          <Grid sx={{ xs:12, md:6}}>
             <Box
               sx={{
                 p: 3,
@@ -113,7 +113,7 @@ export default function About() {
           </Grid>
 
           {/* Sección de Servicios */}
-          <Grid item xs={12} md={6}>
+          <Grid sx={{ xs:12, md:6}}>
             <Box
               sx={{
                 p: 3,
