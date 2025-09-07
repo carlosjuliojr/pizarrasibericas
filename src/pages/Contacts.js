@@ -14,12 +14,12 @@ import {
 import { Email, Phone, Instagram, Language } from "@mui/icons-material";
 
 const type_query = [
-  { value: "teja de piedra pizarra", label: "Teja de piedra pizarra" },
-  { value: "marmol", label: "Marmol" },
-  { value: "adoquin", label: "Adoquin" },
-  { value: "cuarzo", label: "Cuarzo" },
-  { value: "porfido", label: "Profido" },
-  { value: "servicios", label: "Servicios" },
+  { value: "Teja de piedra pizarra", label: "Teja de piedra pizarra" },
+  { value: "Marmol", label: "Marmol" },
+  { value: "Adoquin", label: "Adoquin" },
+  { value: "Cuarzo", label: "Cuarzo" },
+  { value: "Porfido", label: "Profido" },
+  { value: "Servicios", label: "Servicios" },
 ];
 
 export default function Contacts() {
@@ -40,6 +40,7 @@ const handleSubmit = async (e) => {
     "form-name": "contact", // obligatorio para Netlify
     subject: `Nueva consulta: ${formObj.tipo_consulta} del cliente ${formObj.name}`,
   };
+
 
   const encodedData = new URLSearchParams(data).toString();
 
@@ -203,20 +204,20 @@ const handleSubmit = async (e) => {
 
             <Container container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Nombre" name="name" fullWidth required />
+                <TextField label="Nombre" name="nombre" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
                 <TextField label="Email" name="email" type="email" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Teléfono" name="cellphone" fullWidth />
+                <TextField label="Teléfono" name="telefono" fullWidth />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Empresa" name="company" fullWidth />
+                <TextField label="Empresa" name="empresa" fullWidth />
               </Grid>
 
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required>
+                <TextField select label="Tipo de consulta" name="tipo-consulta" fullWidth required>
                   {type_query.map((option) => (
                     <MenuItem key={option.value} value={option.value} >
                       {option.label}
