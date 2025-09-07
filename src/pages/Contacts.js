@@ -25,8 +25,8 @@ const type_query = [
 export default function Contacts() {
   const [open, setOpen] = useState(false);
 
-  /* const handleSubmit = (e) => {
-    e.preventDefault(); */
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
     // enviar a Netlify
     const form = e.target;
@@ -177,6 +177,7 @@ export default function Contacts() {
     method="POST"
     data-netlify="true"
     netlify-honeypot="bot-field"
+    onSubmit={handleSubmit}
   >
     {/* Campo oculto necesario */}
     <input type="hidden" name="form-name" value="contact" />
