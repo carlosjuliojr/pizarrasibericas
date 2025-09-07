@@ -180,7 +180,7 @@ const handleSubmit = async (e) => {
           <form
             name="contact"
             method="POST"
-            data-netlify="true"
+            netlify
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
