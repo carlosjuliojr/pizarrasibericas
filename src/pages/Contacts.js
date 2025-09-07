@@ -25,8 +25,8 @@ const type_query = [
 export default function Contacts() {
   const [open, setOpen] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  /* const handleSubmit = (e) => {
+    e.preventDefault(); */
 
     // enviar a Netlify
     const form = e.target;
