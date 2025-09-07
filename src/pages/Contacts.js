@@ -188,26 +188,26 @@ const handleSubmit = async (e) => {
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
             {/* Subject dinámico tomando el valor de tipo_consulta */}
-            <input type="hidden" name="subject" value="Nueva consulta: %{tipo_consulta}" />
+            <input type="hidden" name="subject" value="Nueva consulta: %{name}" />
 
             <Container container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Nombre" name="nombre" fullWidth required />
+                <TextField label="Nombre" name="name" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
                 <TextField label="Email" name="email" type="email" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Teléfono" name="telefono" fullWidth />
+                <TextField label="Teléfono" name="cellphone" fullWidth />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Empresa" name="empresa" fullWidth />
+                <TextField label="Empresa" name="company" fullWidth />
               </Grid>
 
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
                 <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required>
                   {type_query.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
+                    <MenuItem key={option.value} value={option.value} >
                       {option.label}
                     </MenuItem>
                   ))}
