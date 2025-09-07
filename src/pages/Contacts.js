@@ -187,6 +187,8 @@ const handleSubmit = async (e) => {
             {/* Necesario para Netlify */}
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
+            <input type="hidden" name="subject"
+              value="Requerimiento: %{tipo_consulta} (%{submissionId}) contactar %{nombre}" />
 
             <Container container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
