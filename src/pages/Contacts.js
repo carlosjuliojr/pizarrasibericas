@@ -171,7 +171,61 @@ export default function Contacts() {
         </Grid>
 
         {/* Formulario de contacto */}
-        <Paper elevation={3} sx={{ p: 4 }} >
+<Paper elevation={3} sx={{ p: 4 }}>
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    {/* Campo oculto necesario */}
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="bot-field" />
+
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6}>
+        <TextField label="Nombre" name="nombre" fullWidth required />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField label="Email" name="email" type="email" fullWidth required />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField label="Teléfono" name="telefono" fullWidth />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField label="Empresa" name="empresa" fullWidth />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required>
+          {type_query.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          label="Descripción de la consulta"
+          name="descripcion"
+          multiline
+          rows={4}
+          fullWidth
+          required
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <Button type="submit" variant="contained" color="primary" fullWidth>
+          Enviar
+        </Button>
+      </Grid>
+    </Grid>
+  </form>
+</Paper>
+
+
+
+{/*         <Paper elevation={3} sx={{ p: 4 }} >
           <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
 
@@ -217,7 +271,7 @@ export default function Contacts() {
               </Grid>
             </Container>
           </form>
-        </Paper>
+        </Paper> */}
       </Container>
 
   {/* Modal de agradecimiento */}
