@@ -25,27 +25,32 @@ const type_query = [
 export default function Contacts() {
   const [open, setOpen] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    // enviar a Netlify
-    const form = e.target;
-    const data = new FormData(form);
+  const form = e.target;
+  const formData = new FormData(form);
 
-    fetch("/", {
+  const encodedData = new URLSearchParams(formData).toString();
+
+  try {
+    await fetch("/", {
       method: "POST",
-      body: data,
-    })
-      .then(() => {
-        setOpen(true); // mostrar popup
-        form.reset(); // limpiar formulario
-        //Close form after 7 seg
-        setTimeout(() => {
-        setOpen(false); // Cierra la modal
-      }, 5000);
-      })
-      .catch((error) => alert(error));
-  };
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encodedData,
+    });
+
+    setOpen(true);
+    form.reset();
+
+    setTimeout(() => {
+      setOpen(false);
+    }, 5000);
+  } catch (error) {
+    alert("Hubo un error al enviar el formulario");
+  }
+};
+
 
   return (
     <Box sx={{ py: 8 }}>
@@ -171,66 +176,19 @@ export default function Contacts() {
         </Grid>
 
         {/* Formulario de contacto */}
-<Paper elevation={3} sx={{ p: 4 }}>
-  <form
-    name="contact"
-    method="POST"
-    data-netlify="true"
-   /*  netlify-honeypot="bot-field" */
-    onSubmit={handleSubmit}
-  >
-    {/* Campo oculto necesario */}
-    <input type="hidden" name="form-name" value="contact" />
-    {/* <input type="hidden" name="bot-field" /> */}
-
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={6}>
-        <TextField label="Nombre" name="nombre" fullWidth required />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TextField label="Email" name="email" type="email" fullWidth required />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TextField label="Teléfono" name="telefono" fullWidth />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TextField label="Empresa" name="empresa" fullWidth />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required>
-          {type_query.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
-      </Grid>
-      <Grid item xs={12}>
-        <TextField
-          label="Descripción de la consulta"
-          name="descripcion"
-          multiline
-          rows={4}
-          fullWidth
-          required
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <Button type="submit" variant="contained" color="primary" fullWidth>
-          Enviar
-        </Button>
-      </Grid>
-    </Grid>
-  </form>
-</Paper>
-
-
-
-{/*         <Paper elevation={3} sx={{ p: 4 }} >
-          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <Paper elevation={3} sx={{ p: 4 }}>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            {/* Necesario para Netlify */}
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
 
-            <Container container spacing={2}>
+            <Grid container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
                 <TextField label="Nombre" name="nombre" fullWidth required />
               </Grid>
@@ -270,9 +228,10 @@ export default function Contacts() {
                   Enviar
                 </Button>
               </Grid>
-            </Container>
+            </Grid>
           </form>
-        </Paper> */}
+        </Paper>
+
       </Container>
 
   {/* Modal de agradecimiento */}
