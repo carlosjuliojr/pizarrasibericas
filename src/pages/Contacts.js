@@ -14,32 +14,18 @@ import {
 import { Email, Phone, Instagram, Language } from "@mui/icons-material";
 
 const type_query = [
-  { value: "Teja de piedra pizarra", label: "Teja de piedra pizarra" },
+  { value: "Teja de Piedra Pizarra", label: "Teja de Piedra Pizarra" },
   { value: "Marmol", label: "Marmol" },
   { value: "Adoquin", label: "Adoquin" },
   { value: "Cuarzo", label: "Cuarzo" },
   { value: "Porfido", label: "Profido" },
+  { value: "Piedra natural", label: "Piedra natural" },
   { value: "Servicios", label: "Servicios" },
 ];
 
 export default function Contacts() {
   const [open, setOpen] = useState(false);
-
-  /*   const [formData, setFormData] = useState({
-      nombre: '',
-      email: '',
-      telefono: '',
-      empresa: '',
-      tipo_consulta: '',
-      descripcion: ''
-      // ... otros campos
-    });
-  
-    const handleChange = (e) => {
-      // Actualiza el estado con el valor del campo
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    }; */
-
+  const [tipoConsulta, setTipoConsulta] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,16 +51,7 @@ export default function Contacts() {
       });
 
       setOpen(true);
-      /*  setFormData({
-             nombre: '',
-             email: '',
-             telefono: '',
-             empresa: '',
-             tipo_consulta: '',
-             descripcion: ''
-           }); */
       form.reset();
-
       setTimeout(() => {
         setOpen(false);
       }, 5000);
@@ -82,7 +59,6 @@ export default function Contacts() {
       alert("Hubo un error al enviar el formulario");
     }
   };
-
 
 
   return (
@@ -213,7 +189,7 @@ export default function Contacts() {
           <form
             name="contact"
             method="POST"
-            netlify
+            data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
@@ -223,27 +199,25 @@ export default function Contacts() {
             {/* Subject dinámico tomando el valor de tipo_consulta */}
             <input type="hidden" name="subject" value={`Nueva consulta`} />
 
-            <Container container spacing={2}>
+            <Container maxWidth="sm" spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Nombre" name="nombre" fullWidth required/*  value={formData.nombre}
-                  onChange={handleChange}  *//>
+                <TextField label="Nombre" name="nombre" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Email" name="email" type="email" fullWidth required /* value={formData.email}
-                  onChange={handleChange}  *//>
+                <TextField label="Email" name="email" type="email" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Teléfono" name="telefono" fullWidth /* value={formData.telefono}
-                  onChange={handleChange} */ />
+                <TextField label="Teléfono" name="telefono" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Empresa" name="empresa" fullWidth /* value={formData.empresa}
-                  onChange={handleChange} */ />
+                <TextField label="Empresa" name="empresa" fullWidth required />
               </Grid>
 
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required /* value={formData.tipo_consulta} */
-                  /* onChange={handleChange} */>
+                <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required 
+                  value={tipoConsulta}
+                  onChange={(e) => setTipoConsulta(e.target.value)}
+                >
                   {type_query.map((option) => (
                     <MenuItem key={option.value} value={option.value} >
                       {option.label}
@@ -260,8 +234,6 @@ export default function Contacts() {
                   rows={4}
                   fullWidth
                   required
-                 /*  value={formData.descripcion}
-                  onChange={handleChange} */
                 />
               </Grid>
 
