@@ -25,65 +25,63 @@ const type_query = [
 export default function Contacts() {
   const [open, setOpen] = useState(false);
 
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    telefono: '',
-    empresa: '',
-    tipo_consulta: '',
-    descripcion: ''
-    // ... otros campos
-  });
-
-  const handleChange = (e) => {
-    // Actualiza el estado con el valor del campo
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const form = e.target;
-   const formData1 = new FormData(form);
-   // Convertir FormData en un objeto normal
-  const formObj = Object.fromEntries(formData1.entries());
-
-  console.log(formObj)
-
-  // Construir payload con el subject personalizado
-  const data = {
-    ...formData,
-    "form-name": "contact", // obligatorio para Netlify
-    subject: `Nueva consulta: ${formObj.tipo_consulta} del cliente ${formObj.nombre}`,
-  };
-
-  const encodedData = new URLSearchParams(data).toString();
-  try {
-    await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodedData,
+  /*   const [formData, setFormData] = useState({
+      nombre: '',
+      email: '',
+      telefono: '',
+      empresa: '',
+      tipo_consulta: '',
+      descripcion: ''
+      // ... otros campos
     });
+  
+    const handleChange = (e) => {
+      // Actualiza el estado con el valor del campo
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    }; */
 
-    setOpen(true);
-    setFormData({
-          nombre: '',
-          email: '',
-          telefono: '',
-          empresa: '',
-          tipo_consulta: '',
-          descripcion: ''
-        });
-   // form.reset();
 
-    setTimeout(() => {
-      setOpen(false);
-    }, 5000);
-  } catch (error) {
-    alert("Hubo un error al enviar el formulario");
-  }
-};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData1 = new FormData(form);
+    // Convertir FormData en un objeto normal
+    const formObj = Object.fromEntries(formData1.entries());
+
+    // Construir payload con el subject personalizado
+    const data = {
+      ...formObj,
+      "form-name": "contact", // obligatorio para Netlify
+      subject: `Nueva consulta: ${formObj.tipo_consulta} del cliente ${formObj.nombre}`,
+    };
+
+    const encodedData = new URLSearchParams(data).toString();
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodedData,
+      });
+
+      setOpen(true);
+      /*  setFormData({
+             nombre: '',
+             email: '',
+             telefono: '',
+             empresa: '',
+             tipo_consulta: '',
+             descripcion: ''
+           }); */
+      form.reset();
+
+      setTimeout(() => {
+        setOpen(false);
+      }, 5000);
+    } catch (error) {
+      alert("Hubo un error al enviar el formulario");
+    }
+  };
 
 
 
@@ -139,7 +137,7 @@ const handleSubmit = async (e) => {
         {/* Tarjetas de contacto */}
         <Grid container spacing={3} justifyContent="center" sx={{ mb: 6 }}>
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height:140 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 140 }}>
               <Email color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Correo Electrónico
@@ -157,7 +155,7 @@ const handleSubmit = async (e) => {
           </Grid>
 
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", width:180 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", width: 180 }}>
               <Phone color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Teléfono
@@ -170,7 +168,7 @@ const handleSubmit = async (e) => {
           </Grid>
 
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height:140 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 140 }}>
               <Language color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Página Web
@@ -190,7 +188,7 @@ const handleSubmit = async (e) => {
           </Grid>
 
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height:140, width:180 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 140, width: 180 }}>
               <Instagram color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Instagram
@@ -227,25 +225,25 @@ const handleSubmit = async (e) => {
 
             <Container container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Nombre" name="nombre" fullWidth required value={formData.nombre}
-                  onChange={handleChange}/>
+                <TextField label="Nombre" name="nombre" fullWidth required/*  value={formData.nombre}
+                  onChange={handleChange}  *//>
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Email" name="email" type="email" fullWidth required value={formData.email}
-                  onChange={handleChange}/>
+                <TextField label="Email" name="email" type="email" fullWidth required /* value={formData.email}
+                  onChange={handleChange}  *//>
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Teléfono" name="telefono" fullWidth value={formData.telefono}
-                  onChange={handleChange}/>
+                <TextField label="Teléfono" name="telefono" fullWidth /* value={formData.telefono}
+                  onChange={handleChange} */ />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Empresa" name="empresa" fullWidth value={formData.empresa}
-                  onChange={handleChange}/>
+                <TextField label="Empresa" name="empresa" fullWidth /* value={formData.empresa}
+                  onChange={handleChange} */ />
               </Grid>
 
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required value={formData.tipo_consulta}
-                  onChange={handleChange}>
+                <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required /* value={formData.tipo_consulta} */
+                  /* onChange={handleChange} */>
                   {type_query.map((option) => (
                     <MenuItem key={option.value} value={option.value} >
                       {option.label}
@@ -262,8 +260,8 @@ const handleSubmit = async (e) => {
                   rows={4}
                   fullWidth
                   required
-                  value={formData.descripcion}
-                  onChange={handleChange}
+                 /*  value={formData.descripcion}
+                  onChange={handleChange} */
                 />
               </Grid>
 
@@ -278,7 +276,7 @@ const handleSubmit = async (e) => {
 
       </Container>
 
-  {/* Modal de agradecimiento */}
+      {/* Modal de agradecimiento */}
       <Modal open={open} onClose={() => setOpen(false)}>
         <Box
           sx={{
