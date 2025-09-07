@@ -188,7 +188,7 @@ const handleSubmit = async (e) => {
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
             {/* Subject dinámico tomando el valor de tipo_consulta */}
-            <input type="hidden" name="subject" value="Nueva consulta: %{name}" />
+           {/*  <input type="hidden" name="subject" value="Nueva consulta: %{name}" /> */}
 
             <Container container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
