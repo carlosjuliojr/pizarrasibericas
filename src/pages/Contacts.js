@@ -25,20 +25,36 @@ const type_query = [
 export default function Contacts() {
   const [open, setOpen] = useState(false);
 
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    telefono: '',
+    empresa: '',
+    tipo_consulta: '',
+    descripcion: ''
+    // ... otros campos
+  });
+
+  const handleChange = (e) => {
+    // Actualiza el estado con el valor del campo
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 
   const form = e.target;
-  const formData = new FormData(form);
+  //const formData = new FormData(form);
 
   // Convertir FormData en un objeto normal
-  const formObj = Object.fromEntries(formData.entries());
+ // const formObj = Object.fromEntries(formData.entries());
 
   // Construir payload con el subject personalizado
   const data = {
-    ...formObj,
+    ...formData,
     "form-name": "contact", // obligatorio para Netlify
-    subject: `Nueva consulta: ${formObj.tipo_consulta} del cliente ${formObj.name}`,
+    subject: `Nueva consulta: ${formData.tipo_consulta} del cliente ${formData.nombre}`,
   };
 
 console.log(data)
@@ -204,20 +220,25 @@ console.log(data)
 
             <Container container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Nombre" name="nombre" fullWidth required />
+                <TextField label="Nombre" name="nombre" fullWidth required value={formData.nombre}
+                  onChange={handleChange}/>
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Email" name="email" type="email" fullWidth required />
+                <TextField label="Email" name="email" type="email" fullWidth required value={formData.email}
+                  onChange={handleChange}/>
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Teléfono" name="telefono" fullWidth />
+                <TextField label="Teléfono" name="telefono" fullWidth value={formData.telefono}
+                  onChange={handleChange}/>
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Empresa" name="empresa" fullWidth />
+                <TextField label="Empresa" name="empresa" fullWidth value={formData.empresa}
+                  onChange={handleChange}/>
               </Grid>
 
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField select label="Tipo de consulta" name="tipo-consulta" fullWidth required>
+                <TextField select label="Tipo de consulta" name="tipo_consulta" fullWidth required value={formData.tipo_consulta}
+                  onChange={handleChange}>
                   {type_query.map((option) => (
                     <MenuItem key={option.value} value={option.value} >
                       {option.label}
@@ -234,6 +255,8 @@ console.log(data)
                   rows={4}
                   fullWidth
                   required
+                  value={formData.descripcion}
+                  onChange={handleChange}
                 />
               </Grid>
 
