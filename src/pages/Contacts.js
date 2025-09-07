@@ -31,18 +31,15 @@ const handleSubmit = async (e) => {
   const form = e.target;
   const formData = new FormData(form);
 
-  // Get the values for name and tipo_consulta from the form data
-  const name = formData.get('name');
-  const tipoConsulta = formData.get('tipo_consulta');
+   // El objeto 'data' ya tiene todos los valores del formulario
+    const data = {
+      ...formData,
+      'form-name': 'contact', // Crucial para que Netlify reconozca el formulario
+      'subject': `Nueva consulta: ${formData.tipo_consulta} de ${formData.name}`
+    };
 
-  // Build the dynamic subject line
-  const subjectLine = `Nueva consulta: ${tipoConsulta} de ${name}`;
 
-  // Append the subject line to the formData object
-  formData.append('subject', subjectLine);
-
-  // Convert the updated formData to the correct format for submission
-  const encodedData = new URLSearchParams(formData).toString();
+  const encodedData = new URLSearchParams(data).toString();
 
   try {
     await fetch("/", {
