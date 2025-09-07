@@ -31,13 +31,15 @@ const handleSubmit = async (e) => {
   const form = e.target;
   const formData = new FormData(form);
 
-   // El objeto 'data' ya tiene todos los valores del formulario
-    const data = {
-      ...formData,
-      'form-name': 'contact', // Crucial para que Netlify reconozca el formulario
-      'subject': `Nueva consulta: ${formData.tipo_consulta} de ${formData.name}`
-    };
+  // Convertir FormData en un objeto normal
+  const formObj = Object.fromEntries(formData.entries());
 
+  // Construir payload con el subject personalizado
+  const data = {
+    ...formObj,
+    "form-name": "contact", // obligatorio para Netlify
+    subject: `Nueva consulta: ${formObj.tipo_consulta} del cliente ${formObj.name}`,
+  };
 
   const encodedData = new URLSearchParams(data).toString();
 
@@ -58,6 +60,7 @@ const handleSubmit = async (e) => {
     alert("Hubo un error al enviar el formulario");
   }
 };
+
 
 
   return (
