@@ -31,9 +31,23 @@
 
 
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="nombre" />
-      <input type="email" name="email" />
-      <textarea name="descripcion"></textarea>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="subject" value="Nueva consulta: %{data.tipo_consulta}" />
+        <input type="text" name="nombre" />
+        <input type="email" name="email" />
+        <input type="tel" name="telefono" />
+        <input type="text" name="empresa" />
+        <select name="tipo_consulta">
+            <option value="Teja de piedra pizarra">Teja de piedra pizarra</option>
+            <option value="Marmol">Marmol</option>
+            <option value="Adoquin">Adoquin</option>
+            <option value="Cuarzo">Cuarzo</option>
+            <option value="Profido">Profido</option>
+            <option value="Marmol">Marmol</option>
+            <option value="Servicios">Servicios</option>
+        </select>
+        <textarea name="descripcion"></textarea>
     </form>
 
     <div id="root"></div>
