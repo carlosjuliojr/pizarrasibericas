@@ -45,21 +45,20 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   const form = e.target;
-  //const formData = new FormData(form);
+   const formData1 = new FormData(form);
+   // Convertir FormData en un objeto normal
+  const formObj = Object.fromEntries(formData1.entries());
 
-  // Convertir FormData en un objeto normal
- // const formObj = Object.fromEntries(formData.entries());
+  console.log(formObj)
 
   // Construir payload con el subject personalizado
   const data = {
     ...formData,
     "form-name": "contact", // obligatorio para Netlify
-    subject: `Nueva consulta: ${formData.tipo_consulta} del cliente ${formData.nombre}`,
+    subject: `Nueva consulta: ${formObj.tipo_consulta} del cliente ${formObj.nombre}`,
   };
 
-console.log(data)
   const encodedData = new URLSearchParams(data).toString();
-
   try {
     await fetch("/", {
       method: "POST",
@@ -68,7 +67,15 @@ console.log(data)
     });
 
     setOpen(true);
-    form.reset();
+    setFormData({
+          nombre: '',
+          email: '',
+          telefono: '',
+          empresa: '',
+          tipo_consulta: '',
+          descripcion: ''
+        });
+   // form.reset();
 
     setTimeout(() => {
       setOpen(false);
