@@ -176,12 +176,12 @@ export default function Contacts() {
     name="contact"
     method="POST"
     data-netlify="true"
-    netlify-honeypot="bot-field"
+   /*  netlify-honeypot="bot-field" */
     onSubmit={handleSubmit}
   >
     {/* Campo oculto necesario */}
     <input type="hidden" name="form-name" value="contact" />
-    <input type="hidden" name="bot-field" />
+    {/* <input type="hidden" name="bot-field" /> */}
 
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6}>
