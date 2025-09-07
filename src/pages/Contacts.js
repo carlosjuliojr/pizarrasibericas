@@ -31,6 +31,17 @@ const handleSubmit = async (e) => {
   const form = e.target;
   const formData = new FormData(form);
 
+  // Get the values for name and tipo_consulta from the form data
+  const name = formData.get('name');
+  const tipoConsulta = formData.get('tipo_consulta');
+
+  // Build the dynamic subject line
+  const subjectLine = `Nueva consulta: ${tipoConsulta} de ${name}`;
+
+  // Append the subject line to the formData object
+  formData.append('subject', subjectLine);
+
+  // Convert the updated formData to the correct format for submission
   const encodedData = new URLSearchParams(formData).toString();
 
   try {
