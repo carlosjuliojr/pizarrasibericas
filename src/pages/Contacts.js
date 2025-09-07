@@ -188,7 +188,7 @@ const handleSubmit = async (e) => {
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
 
-            <Grid container spacing={2}>
+            <Container container spacing={2}>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
                 <TextField label="Nombre" name="nombre" fullWidth required />
               </Grid>
@@ -228,7 +228,7 @@ const handleSubmit = async (e) => {
                   Enviar
                 </Button>
               </Grid>
-            </Grid>
+            </Container>
           </form>
         </Paper>
 
