@@ -61,9 +61,10 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2">
               <Phone sx={{ verticalAlign: 'middle', mr: 1 }} />
-              +56 (9) 9052-6263<br/>
-              <Phone sx={{ verticalAlign: 'middle', mr: 1 }} />
               +56 (9) 9338-6875
+              <br/>
+              <Phone sx={{ verticalAlign: 'middle', mr: 1 }} />
+              +56 (9) 9052-6263
             </Typography>
           </Grid>
 

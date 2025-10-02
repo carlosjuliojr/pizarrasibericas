@@ -137,8 +137,8 @@ export default function Contacts() {
                 Teléfono
               </Typography>
               <Typography variant="body1">
-                Gerente de Ventas e Instalación Mario Cifuentes<br /> +56 (9) 9052-6263 <br />
-                Mantención e instalación de revestimientos<br />+56 (9) 9338-6875
+                Gerente de Ventas e Instalación Mario Cifuentes<br /> +56 (9) 9338-6875<br />
+                Mantención e instalación de revestimientos<br /> +56 (9) 9052-6263
               </Typography>
             </Paper>
           </Grid>
