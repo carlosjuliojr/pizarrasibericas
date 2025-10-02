@@ -113,7 +113,7 @@ export default function Contacts() {
         {/* Tarjetas de contacto */}
         <Grid container spacing={3} justifyContent="center" sx={{ mb: 6 }}>
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 140 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 260 }}>
               <Email color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Correo Electrónico
@@ -137,14 +137,14 @@ export default function Contacts() {
                 Teléfono
               </Typography>
               <Typography variant="body1">
-                +56 (9) 9052-6263 <br />
-                +56 (9) 9338-6875
+                Gerente de Ventas e Instalación Mario Cifuentes<br /> +56 (9) 9052-6263 <br />
+                Mantención e instalación de revestimientos<br />+56 (9) 9338-6875
               </Typography>
             </Paper>
           </Grid>
 
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 140 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 260 }}>
               <Language color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Página Web
@@ -164,7 +164,7 @@ export default function Contacts() {
           </Grid>
 
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 140, width: 180 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", height: 260, width: 180 }}>
               <Instagram color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Instagram
@@ -210,7 +210,7 @@ export default function Contacts() {
                 <TextField label="Teléfono" name="telefono" fullWidth required />
               </Grid>
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
-                <TextField label="Empresa" name="empresa" fullWidth required />
+                <TextField label="Empresa" name="empresa" fullWidth />
               </Grid>
 
               <Grid sx={{ xs: 12, sm: 6, mb: 2 }}>
