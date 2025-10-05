@@ -50,6 +50,16 @@ export default function Contacts() {
         body: encodedData,
       });
 
+    // 🔥 Disparar conversión de Google Ads
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17521160929/TvaGCM265KcbEOHl3qJB",
+        event_callback: () => {
+          console.log("✅ Conversion registrada en Google Ads");
+        },
+      });
+    }
+
       setOpen(true);
       form.reset();
       setTimeout(() => {
