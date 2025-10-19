@@ -25,6 +25,31 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Pizarras Ibéricas</title>
+  <!-- ✅ Datos estructurados Schema.org (para que Google muestre tu número) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Pizarras Ibéricas",
+      "image": "https://pizarrasibericas.com/logo3.jpg",
+      "url": "https://pizarrasibericas.cl",
+      "telephone": "+56 (9) 9052-6263",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 1",
+        "addressLocality": "Santiago de Chile",
+        "addressCountry": "ES"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/pizarrasibericas",
+        "https://www.instagram.com/pizarrasibericas"
+      ]
+    }
+    </script>
+
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17521160929"></script>
     <script>
@@ -38,6 +63,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
+    <!-- ✅ Tu número visible en el HTML base (para que Google lo lea también) -->
+    <div style="display:none;">
+      Contacto: +56 (9) 9052-6263 | Pizarras Ibéricas | https://pizarrasibericas.cl
+    </div>
 
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
         <input type="hidden" name="form-name" value="contact" />
