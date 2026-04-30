@@ -141,14 +141,13 @@ export default function Contacts() {
           </Grid>
 
           <Grid sx={{ xs: 12, sm: 6, md: 4 }}>
-            <Paper elevation={3} sx={{ p: 2, textAlign: "center", width: 180 }}>
+            <Paper elevation={3} sx={{ p: 2, textAlign: "center", width: 180, height: 260 }}>
               <Phone color="primary" sx={{ fontSize: 40, mb: 1 }} />
               <Typography variant="h6" gutterBottom>
                 Teléfono
               </Typography>
               <Typography variant="body1">
-                Gerente de Ventas e Instalación Mario Cifuentes<br /> +56 (9) 9338-6875<br />
-                Mantención e instalación de revestimientos<br /> +56 (9) 9052-6263
+                Gerente de Ventas e instalación de revestimientos<br /> +56 (9) 9052-6263
               </Typography>
             </Paper>
           </Grid>
