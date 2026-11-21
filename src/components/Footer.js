@@ -33,7 +33,7 @@ export default function Footer() {
               Pizarras Ibéricas
             </Typography>
             <Typography variant="body2" sx={{ mb: 2 }}>
-              Venta y servicio de instalación de materiales de piedra natural.
+              Venta e instalación de TEJAS DE PIEDRA PIZARRA.
             </Typography>
             <Box sx={{ mt: 2 }}>
               <IconButton
@@ -61,7 +61,7 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2">
               <Phone sx={{ verticalAlign: 'middle', mr: 1 }} />
-              +56 (9) 9052-6263
+              Eduardo Elgueta: +56 (9) 9052-6263
             </Typography>
           </Grid>
 
